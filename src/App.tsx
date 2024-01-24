@@ -1,12 +1,7 @@
-import styled from "styled-components";
-
-const Titulo = styled.h1`
-  font-size: 2rem;
-  color: tomato;
-`;
+import Login from "./components/Login/Login";
 
 function App() {
-  return <Titulo>Hello World</Titulo>;
+  return <Login />;
 }
 
 export default App;
