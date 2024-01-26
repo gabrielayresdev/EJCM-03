@@ -8,7 +8,7 @@ import {
 } from "./styles";
 
 interface InputInterface {
-  label: string;
+  label?: string;
   id: string;
   placeholder?: string;
   iconPath: string;
@@ -26,7 +26,7 @@ const Input = ({
 }: InputInterface) => {
   return (
     <Container>
-      <LabelField htmlFor={id}>{label}</LabelField>
+      {label ? <LabelField htmlFor={id}>{label}</LabelField> : null}
       <InputPaddingContainer>
         <InputContainer>
           <div>

@@ -23,7 +23,7 @@ export const LabelField = styled.label`
 `;
 
 export const InputPaddingContainer = styled.div`
-  padding: 10px;
+  padding: 0 0 10px 10px;
   width: 100%;
 `;
 
