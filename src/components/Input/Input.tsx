@@ -1,5 +1,11 @@
 import React from "react";
-import { Container, InputContainer, InputField, LabelField } from "./styles";
+import {
+  Container,
+  InputContainer,
+  InputField,
+  InputPaddingContainer,
+  LabelField,
+} from "./styles";
 
 interface InputInterface {
   label: string;
@@ -21,21 +27,23 @@ const Input = ({
   return (
     <Container>
       <LabelField htmlFor={id}>{label}</LabelField>
-      <InputContainer>
-        <div>
-          <img src={iconPath} />
-        </div>
-        <InputField
-          type="text"
-          id={id}
-          placeholder={placeholder}
-          value={value}
-          onChange={(event) => {
-            const target = event.target;
-            setValue(target.value);
-          }}
-        />
-      </InputContainer>
+      <InputPaddingContainer>
+        <InputContainer>
+          <div>
+            <img src={iconPath} />
+          </div>
+          <InputField
+            type="text"
+            id={id}
+            placeholder={placeholder}
+            value={value}
+            onChange={(event) => {
+              const target = event.target;
+              setValue(target.value);
+            }}
+          />
+        </InputContainer>
+      </InputPaddingContainer>
     </Container>
   );
 };

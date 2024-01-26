@@ -22,14 +22,17 @@ export const LabelField = styled.label`
   }
 `;
 
+export const InputPaddingContainer = styled.div`
+  padding: 10px;
+  width: 100%;
+`;
+
 export const InputContainer = styled.div`
   padding: 10px 0;
   display: flex;
   align-items: center;
   gap: 10px;
   border-bottom: 1px solid #053d58cc;
-  margin-bottom: 8px;
-
   width: 100%;
 `;
 
