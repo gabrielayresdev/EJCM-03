@@ -1,13 +1,16 @@
-import React from "react";
-import { Button } from "./styles";
+import { Button, buttonProps } from "./styles";
 
-interface SignupButtonInterface {
+interface SignupButtonInterface extends buttonProps {
   text: string;
   onClick: VoidFunction;
 }
 
-const SignupButton = ({ text, onClick }: SignupButtonInterface) => {
-  return <Button onClick={onClick}>{text}</Button>;
+const SignupButton = ({ text, onClick, ...args }: SignupButtonInterface) => {
+  return (
+    <Button onClick={onClick} {...args}>
+      {text}
+    </Button>
+  );
 };
 
 export default SignupButton;

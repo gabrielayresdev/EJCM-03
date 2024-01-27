@@ -71,7 +71,7 @@ const Register = () => {
       </CheckboxContainer>
 
       <ButtonContainer>
-        <NavLink to={"/"}>
+        <NavLink to={"/confirmar-email"}>
           <SignupButton text="Entrar" onClick={() => {}} />
         </NavLink>
       </ButtonContainer>
