@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../Logo/Logo";
 import SignupButton from "../SignupButton/SignupButton";
-import { ButtonUnderImageContainer, Container } from "./styles";
+import { ButtonUnderImageContainer, Container, ImageContainer } from "./styles";
 import { ButtonContainer } from "./styles";
 import { NavLink } from "react-router-dom";
 
@@ -12,7 +12,9 @@ const EmailConfirmation = () => {
     return (
       <Container>
         <Logo />
-        <img src="/src/assets/Dog paw-cuate 2.png" />
+        <ImageContainer>
+          <img src="/src/assets/Dog paw-cuate 2.png" />
+        </ImageContainer>
         <ButtonUnderImageContainer>
           <NavLink to="/">
             <SignupButton

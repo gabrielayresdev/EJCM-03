@@ -12,6 +12,11 @@ export const Container = styled.div`
   align-items: center;
 `;
 
+export const ImageContainer = styled.div`
+  pointer-events: none;
+  z-index: 1;
+`;
+
 export const ButtonContainer = styled.div`
   margin-top: 1.25rem;
   width: 100%;
@@ -19,6 +24,6 @@ export const ButtonContainer = styled.div`
 
 export const ButtonUnderImageContainer = styled.div`
   width: 100%;
-  transform: translateY(-33px);
-  z-index: -1;
+  transform: translateY(-34px);
+  z-index: 0;
 `;
