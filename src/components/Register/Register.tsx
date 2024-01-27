@@ -10,6 +10,7 @@ import {
 } from "./styles";
 import SignupButton from "../SignupButton/SignupButton";
 import CheckboxInput from "../CheckboxInput/CheckboxInput";
+import { NavLink } from "react-router-dom";
 
 const Register = () => {
   const [nome, setNome] = React.useState("");
@@ -70,7 +71,9 @@ const Register = () => {
       </CheckboxContainer>
 
       <ButtonContainer>
-        <SignupButton text="Entrar" onClick={() => {}} />
+        <NavLink to={"/"}>
+          <SignupButton text="Entrar" onClick={() => {}} />
+        </NavLink>
       </ButtonContainer>
     </RegisterContainer>
   );

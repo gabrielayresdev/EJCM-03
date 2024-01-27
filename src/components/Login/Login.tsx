@@ -9,6 +9,7 @@ import {
   LogoContainer,
   SignupAnchorContainer,
 } from "./styles";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   const [login, setLogin] = React.useState("");
@@ -41,8 +42,12 @@ const Login = () => {
       </SignupAnchorContainer>
 
       <ButtonContainer>
-        <SignupButton text="Entrar" onClick={() => {}} />
-        <SignupButton text="Cadastrar" onClick={() => {}} />
+        <NavLink to={"/page"}>
+          <SignupButton text="Entrar" onClick={() => {}} />
+        </NavLink>
+        <NavLink to={"/cadastro"}>
+          <SignupButton text="Cadastrar" onClick={() => {}} />
+        </NavLink>
       </ButtonContainer>
     </LoginContainer>
   );
