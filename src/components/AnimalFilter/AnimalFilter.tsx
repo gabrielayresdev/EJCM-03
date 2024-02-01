@@ -1,16 +1,18 @@
 import React from "react";
-import { AnimalFilterContainer, ImageContainer, Text } from "./styles";
+import { AnimalFilterContainer, Image, ImageContainer, Text } from "./styles";
 
-const AnimalFilter = () => {
+interface AnimalFilterInterface {
+  img: string;
+  text: string;
+}
+
+const AnimalFilter = ({ img, text }: AnimalFilterInterface) => {
   return (
     <AnimalFilterContainer>
       <ImageContainer>
-        <img
-          src="/src/assets/cachorros.png"
-          alt="Filtrar produtos para cachorros"
-        />
+        <Image src={img} alt={`Filtrar produtos para cachorros ${text}`} />
       </ImageContainer>
-      <Text>Cachorros</Text>
+      <Text>{text}</Text>
     </AnimalFilterContainer>
   );
 };

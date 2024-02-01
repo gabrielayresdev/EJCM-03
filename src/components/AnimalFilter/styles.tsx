@@ -10,7 +10,18 @@ export const AnimalFilterContainer = styled.div`
 export const ImageContainer = styled.div`
   background: #154962;
   border-radius: 50%;
-  padding: 1.25rem;
+
+  width: 7.5rem;
+  aspect-ratio: 1/1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Image = styled.img`
+  max-width: 100%;
+  max-height: 100%;
 `;
 
 export const Text = styled.p`
