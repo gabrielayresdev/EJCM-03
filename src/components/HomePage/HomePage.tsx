@@ -1,17 +1,18 @@
-import React from "react";
 import HomeHeader from "../HomeHeader/HomeHeader";
-import { HomeContainer } from "./styles";
-import AnimalFilter from "../AnimalFilter/AnimalFilter";
-import Benefits from "../Benefits/Benefits";
-import ProductCard from "../ProductCard/ProductCard";
+import { Content, HomeContainer } from "./styles";
+import BenefitsCarousel from "../BenefitsCarousel/BenefitsCarousel";
+import AnimalFilterCarousel from "../AnimalFilterCarousel/AnimalFilterCarousel";
+import ProductCarousel from "../ProductCarousel/ProductCarousel";
 
 const HomePage = () => {
   return (
     <HomeContainer>
       <HomeHeader />
-      <AnimalFilter />
-      <Benefits />
-      <ProductCard />
+      <Content>
+        <AnimalFilterCarousel />
+        <BenefitsCarousel />
+        <ProductCarousel />
+      </Content>
     </HomeContainer>
   );
 };
