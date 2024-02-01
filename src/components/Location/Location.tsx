@@ -5,14 +5,17 @@ const Location = () => {
   return (
     <LocationContainer>
       <div>
-        <img src="/src/assets/location.svg" />
+        <img src="/src/assets/icons/location.svg" />
       </div>
       <TextContainer>
         <p>Receber em</p>
         <p>rua Dionísio, 72- apt 402</p>
       </TextContainer>
       <div>
-        <img src="/src/assets/arrow.svg" alt="selecionar local de entrega" />
+        <img
+          src="/src/assets/icons/arrow.svg"
+          alt="selecionar local de entrega"
+        />
       </div>
     </LocationContainer>
   );

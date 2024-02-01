@@ -25,7 +25,7 @@ const Login = () => {
         label={"login"}
         id={"login"}
         placeholder={"Digite o seu..."}
-        iconPath="/src/assets/gitIcon.svg"
+        iconPath="/src/assets/icons/gitIcon.svg"
         value={login}
         setValue={setLogin}
       />
@@ -33,7 +33,7 @@ const Login = () => {
         label={"Senha"}
         id={"senha"}
         placeholder={"Digite o seu..."}
-        iconPath="/src/assets/gitIcon.svg"
+        iconPath="/src/assets/icons/lock.png"
         value={password}
         setValue={setPassword}
       />
@@ -42,7 +42,7 @@ const Login = () => {
       </SignupAnchorContainer>
 
       <ButtonContainer>
-        <NavLink to={"/page"}>
+        <NavLink to={"/home"}>
           <SignupButton text="Entrar" onClick={() => {}} />
         </NavLink>
         <NavLink to={"/cadastro"}>

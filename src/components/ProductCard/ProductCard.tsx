@@ -9,19 +9,26 @@ import {
   TextHighlight,
 } from "./styles";
 
-const ProductCard = () => {
+interface ProductInterface {
+  img: string;
+  price: number;
+  name: string;
+}
+
+const ProductCard = ({ product }: { product: ProductInterface }) => {
   return (
     <ProductCardContainer>
       <ImageContainer>
-        <img src="/src/assets/doguinho.png" />
+        <img src={product.img} />
       </ImageContainer>
-      <ProductName>Coleira Peitoral ...</ProductName>
+      <ProductName>{product.name}</ProductName>
       <CardFooter>
         <Price>
-          <TextHighlight>R$</TextHighlight>90,00
+          <TextHighlight>R$</TextHighlight>
+          {product.price.toFixed(2)}
         </Price>
         <AddCardButton>
-          <img src="/src/assets/add.svg" alt="adicionar ao carrinho" />
+          <img src="/src/assets/icons/add.svg" alt="adicionar ao carrinho" />
         </AddCardButton>
       </CardFooter>
     </ProductCardContainer>

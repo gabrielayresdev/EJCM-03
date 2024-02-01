@@ -3,6 +3,9 @@ import { ProductCarouselContainer, ProductCarouselTitle } from "./styles";
 
 import "swiper/css";
 import ProductCard from "../ProductCard/ProductCard";
+import { forYou } from "../../response";
+
+import { Pagination } from "swiper/modules";
 
 const ProductCarousel = () => {
   return (
@@ -12,19 +15,20 @@ const ProductCarousel = () => {
         spaceBetween={32}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
+        slidesPerView={"auto"}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
       >
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard />
-        </SwiperSlide>
+        {forYou.map((product) => {
+          return (
+            <SwiperSlide>
+              <ProductCard product={product} />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </ProductCarouselContainer>
   );

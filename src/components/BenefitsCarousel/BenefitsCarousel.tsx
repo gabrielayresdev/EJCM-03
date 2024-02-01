@@ -4,6 +4,8 @@ import { BenefitsCarouselContainer, BenefitsTitle } from "./styles";
 
 import "swiper/css";
 
+import { Pagination } from "swiper/modules";
+
 const BenefitsCarousel = () => {
   const benefits = [
     { src: "/src/assets/benefits/frete.png", text: "Frete grátis" },
@@ -19,6 +21,12 @@ const BenefitsCarousel = () => {
         spaceBetween={32}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
+        slidesPerView={"auto"}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
       >
         {benefits.map((benefit) => {
           return (

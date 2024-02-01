@@ -4,7 +4,7 @@ export const ProductCardContainer = styled.div`
   padding: 0.5rem 0.625rem;
   background: #f2f3f3;
   border-radius: 1.125rem;
-  width: fit-content;
+  max-width: 7.5rem;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
 `;
 
@@ -18,6 +18,11 @@ export const ProductName = styled.h4`
   font-size: 0.625rem;
   color: #154962;
   margin-bottom: 0.5rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 `;
 
 export const CardFooter = styled.div`

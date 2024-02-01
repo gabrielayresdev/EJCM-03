@@ -4,6 +4,8 @@ import { AnimalCarouselContainer } from "./styles";
 import "swiper/css";
 import AnimalFilter from "../AnimalFilter/AnimalFilter";
 
+import { Pagination } from "swiper/modules";
+
 const AnimalFilterCarousel = () => {
   const animals = [
     { src: "/src/assets/pets/cachorros.png", name: "Cachorros" },
@@ -18,6 +20,12 @@ const AnimalFilterCarousel = () => {
         spaceBetween={32}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
+        slidesPerView={"auto"}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
       >
         {animals.map((animal) => {
           return (
