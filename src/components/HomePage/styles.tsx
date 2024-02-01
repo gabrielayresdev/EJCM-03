@@ -9,5 +9,5 @@ export const HomeContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 1.625rem 0 1.625rem 1.25rem;
+  padding: 1.625rem 0 0 1.25rem;
 `;
