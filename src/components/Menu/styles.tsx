@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const MenuContainer = styled.nav`
   position: fixed;
@@ -15,4 +16,15 @@ export const MenuContainer = styled.nav`
   background: #154962;
 
   z-index: 10;
+`;
+
+export const Link = styled(NavLink)`
+  &.active::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #f2f3f3;
+    display: block;
+    margin-top: 1px;
+  }
 `;

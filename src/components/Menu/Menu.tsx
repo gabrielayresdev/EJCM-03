@@ -1,6 +1,5 @@
 import React from "react";
-import { MenuContainer } from "./styles";
-import { NavLink } from "react-router-dom";
+import { Link, MenuContainer } from "./styles";
 import SideMenu from "../SideMenu/SideMenu";
 
 const Menu = () => {
@@ -8,18 +7,18 @@ const Menu = () => {
 
   return (
     <MenuContainer>
-      <NavLink to={"/home"}>
+      <Link to={"/home"}>
         <img src="/src/assets/icons/house.svg" alt="ir para a home" />
-      </NavLink>
-      <NavLink to={"/pesquisar"}>
+      </Link>
+      <Link to={"/pesquisar"}>
         <img
           src="/src/assets/icons/lupa.svg"
           alt="ir para a área de pesquisa"
         />
-      </NavLink>
-      <NavLink to={"/carrinho"}>
+      </Link>
+      <Link to={"/carrinho"}>
         <img src="/src/assets/icons/box.svg" alt="ir para a carrinho" />
-      </NavLink>
+      </Link>
       <div onClick={() => setMenuVisibility(true)}>
         <img src="/src/assets/icons/person.svg" alt="ir para a perfil" />
       </div>
