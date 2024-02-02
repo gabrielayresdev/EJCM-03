@@ -1,9 +1,7 @@
-import React from "react";
-
 const Logo = () => {
   return (
     <div>
-      <img src="/src/assets/logo.png" alt="logo do site" />
+      <img src="/src/assets/images/logo.png" alt="logo do site" />
     </div>
   );
 };

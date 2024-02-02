@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MenuContainer = styled.nav`
-  position: sticky;
+  position: fixed;
   bottom: 0;
   left: 0;
 

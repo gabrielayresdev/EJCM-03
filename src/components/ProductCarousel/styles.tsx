@@ -6,7 +6,6 @@ export const ProductCarouselContainer = styled.div`
 `;
 
 export const ProductCarouselTitle = styled.h2`
-  font-size: 0.93rem;
   font-weight: 600;
   margin-bottom: 1.75rem;
   width: fit-content;

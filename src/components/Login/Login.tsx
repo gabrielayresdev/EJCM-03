@@ -20,7 +20,7 @@ const Login = () => {
       <LogoContainer>
         <Logo />
       </LogoContainer>
-      <img src="./src/assets/picture_login.png" />
+      <img src="./src/assets/images/picture_login.png" />
       <Input
         label={"login"}
         id={"login"}

@@ -13,7 +13,7 @@ const EmailConfirmation = () => {
       <Container>
         <Logo />
         <ImageContainer>
-          <img src="/src/assets/Dog paw-cuate 2.png" />
+          <img src="/src/assets/images/Dog paw-cuate 2.png" />
         </ImageContainer>
         <ButtonUnderImageContainer>
           <NavLink to="/">
@@ -31,7 +31,7 @@ const EmailConfirmation = () => {
     return (
       <Container>
         <Logo />
-        <img src="/src/assets/Cat astronaut-cuate 2.png" />
+        <img src="/src/assets/images/Cat astronaut-cuate 2.png" />
         <ButtonContainer>
           <SignupButton
             text="Confirme seu email"

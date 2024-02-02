@@ -8,30 +8,30 @@ import {
   ProductName,
   TextHighlight,
 } from "./styles";
-
-interface ProductInterface {
-  img: string;
-  price: number;
-  name: string;
-}
+import { NavLink /* useNavigate */ } from "react-router-dom";
+import { ProductInterface } from "../../response";
 
 const ProductCard = ({ product }: { product: ProductInterface }) => {
+  /* const navigate = useNavigate(); */
   return (
-    <ProductCardContainer>
-      <ImageContainer>
-        <img src={product.img} />
-      </ImageContainer>
-      <ProductName>{product.name}</ProductName>
-      <CardFooter>
-        <Price>
-          <TextHighlight>R$</TextHighlight>
-          {product.price.toFixed(2)}
-        </Price>
-        <AddCardButton>
-          <img src="/src/assets/icons/add.svg" alt="adicionar ao carrinho" />
-        </AddCardButton>
-      </CardFooter>
-    </ProductCardContainer>
+    <NavLink to={`/produto/${product.id}`}>
+      <ProductCardContainer /* onClick={() => navigate(`/produto/${product.id}`) */
+      >
+        <ImageContainer>
+          <img src={product.img} />
+        </ImageContainer>
+        <ProductName>{product.name}</ProductName>
+        <CardFooter>
+          <Price>
+            <TextHighlight>R$</TextHighlight>
+            {product.price.toFixed(2)}
+          </Price>
+          <AddCardButton>
+            <img src="/src/assets/icons/add.svg" alt="adicionar ao carrinho" />
+          </AddCardButton>
+        </CardFooter>
+      </ProductCardContainer>
+    </NavLink>
   );
 };
 

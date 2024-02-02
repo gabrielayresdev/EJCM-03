@@ -33,13 +33,13 @@ const SideMenu = ({ visible, setVisible }: SideMenuInterface) => {
       <SideMenuContent visible={visible}>
         <UpperContent>
           <Detail>
-            <img src="/src/assets/freepik--Character--inject-64.png" />
+            <img src="/src/assets/images/freepik--Character--inject-64.png" />
           </Detail>
           <div>
             <img src="/src/assets/icons/settings.png" alt="configuração" />
           </div>
           <Profile>
-            <img src="/src/assets/picture.png" alt="foto de perfil" />
+            <img src="/src/assets/images/picture.png" alt="foto de perfil" />
             <WellcomeMessage>Olá, Rayssa!</WellcomeMessage>
             <NavLink to={"/"}>
               <ExitAccount>Sai da conta</ExitAccount>

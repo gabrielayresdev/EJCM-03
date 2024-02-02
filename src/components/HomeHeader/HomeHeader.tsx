@@ -6,7 +6,7 @@ const HomeHeader = () => {
   return (
     <Header>
       <Logo>
-        <img src="/src/assets/logo-fundo-escuro.png" />
+        <img src="/src/assets/images/logo-fundo-escuro.png" />
       </Logo>
       <Location />
     </Header>

@@ -8,18 +8,16 @@ import { ProductInterface } from "../../response";
 import { Pagination } from "swiper/modules";
 
 interface ProductCarouselInterface {
-  text: string;
+  text?: string;
   content: ProductInterface[];
 }
 
 const ProductCarousel = ({ text, content }: ProductCarouselInterface) => {
   return (
     <ProductCarouselContainer>
-      <ProductCarouselTitle>{text}</ProductCarouselTitle>
+      {text ? <ProductCarouselTitle>{text}</ProductCarouselTitle> : null}
       <Swiper
         spaceBetween={32}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
         slidesPerView={"auto"}
         pagination={{
           clickable: true,
@@ -29,7 +27,7 @@ const ProductCarousel = ({ text, content }: ProductCarouselInterface) => {
       >
         {content.map((product) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={product.id}>
               <ProductCard product={product} />
             </SwiperSlide>
           );
