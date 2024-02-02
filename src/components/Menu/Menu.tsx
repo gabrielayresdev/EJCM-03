@@ -1,8 +1,11 @@
 import React from "react";
 import { MenuContainer } from "./styles";
 import { NavLink } from "react-router-dom";
+import SideMenu from "../SideMenu/SideMenu";
 
 const Menu = () => {
+  const [menuVisibility, setMenuVisibility] = React.useState(false);
+
   return (
     <MenuContainer>
       <NavLink to={"/home"}>
@@ -17,9 +20,11 @@ const Menu = () => {
       <NavLink to={"/carrinho"}>
         <img src="/src/assets/icons/box.svg" alt="ir para a carrinho" />
       </NavLink>
-      <NavLink to={"/perfil"}>
+      <div onClick={() => setMenuVisibility(true)}>
         <img src="/src/assets/icons/person.svg" alt="ir para a perfil" />
-      </NavLink>
+      </div>
+
+      <SideMenu visible={menuVisibility} setVisible={setMenuVisibility} />
     </MenuContainer>
   );
 };
