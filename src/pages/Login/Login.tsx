@@ -1,8 +1,8 @@
 import React from "react";
-import Input from "../Input/Input";
-import SignupAnchor from "../SignupAnchor/SignupAnchor";
-import SignupButton from "../SignupButton/SignupButton";
-import Logo from "../Logo/Logo";
+import Input from "../../components/Input/Input";
+import SignupAnchor from "../../components/SignupAnchor/SignupAnchor";
+import SignupButton from "../../components/SignupButton/SignupButton";
+import Logo from "../../components/Logo/Logo";
 import {
   ButtonContainer,
   LoginContainer,

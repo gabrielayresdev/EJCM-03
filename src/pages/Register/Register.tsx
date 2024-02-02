@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "../Input/Input";
-import Logo from "../Logo/Logo";
+import Input from "../../components/Input/Input";
+import Logo from "../../components/Logo/Logo";
 import {
   ButtonContainer,
   CheckboxContainer,
@@ -8,8 +8,8 @@ import {
   LogoContainer,
   RegisterContainer,
 } from "./styles";
-import SignupButton from "../SignupButton/SignupButton";
-import CheckboxInput from "../CheckboxInput/CheckboxInput";
+import SignupButton from "../../components/SignupButton/SignupButton";
+import CheckboxInput from "../../components/CheckboxInput/CheckboxInput";
 import { NavLink } from "react-router-dom";
 
 const Register = () => {

@@ -19,8 +19,6 @@ const BenefitsCarousel = () => {
       <BenefitsTitle>Meus benefícios</BenefitsTitle>
       <Swiper
         spaceBetween={32}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
         slidesPerView={"auto"}
         pagination={{
           clickable: true,
@@ -30,7 +28,7 @@ const BenefitsCarousel = () => {
       >
         {benefits.map((benefit) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={benefit.text}>
               <Benefits img={benefit.src} text={benefit.text} />
             </SwiperSlide>
           );

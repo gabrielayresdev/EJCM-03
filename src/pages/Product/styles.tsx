@@ -13,7 +13,7 @@ export const Image = styled.img`
   margin: 0 auto;
 `;
 
-export const ProductName = styled.p`
+export const ProductName = styled.h2`
   font-size: 1.25rem;
   text-align: center;
   color: #154962;
@@ -58,7 +58,7 @@ export const ButtonContainer = styled.div`
   margin-bottom: 1.25rem;
 `;
 
-export const CarouselTitle = styled.p`
+export const CarouselTitle = styled.h4`
   color: #263238;
   padding: 1.25rem 1rem;
   width: fit-content;

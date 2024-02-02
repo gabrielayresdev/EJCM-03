@@ -18,8 +18,6 @@ const AnimalFilterCarousel = () => {
     <AnimalCarouselContainer>
       <Swiper
         spaceBetween={32}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
         slidesPerView={"auto"}
         pagination={{
           clickable: true,
@@ -29,7 +27,7 @@ const AnimalFilterCarousel = () => {
       >
         {animals.map((animal) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={animal.name}>
               <AnimalFilter img={animal.src} text={animal.name} />
             </SwiperSlide>
           );

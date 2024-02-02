@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ProductInterface, products } from "../../response";
 import {
   Counter,
@@ -13,19 +13,25 @@ import {
   ButtonContainer,
   CarouselTitle,
 } from "./styles";
-import SignupButton from "../SignupButton/SignupButton";
-import ProductCarousel from "../ProductCarousel/ProductCarousel";
-import Menu from "../Menu/Menu";
+import SignupButton from "../../components/SignupButton/SignupButton";
+import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
+import Menu from "../../components/Menu/Menu";
 
 const Product = () => {
   const { id } = useParams();
   const [data, setData] = React.useState<ProductInterface | null>(null);
   const [amount, setAmount] = React.useState(1);
+  const navigate = useNavigate();
 
-  React.useState(() => {
+  React.useEffect(() => {
     const product = products.find((product) => product.id === Number(id));
-    if (product) setData(product);
-  });
+    if (product) {
+      setData(product);
+      setAmount(1);
+    } else {
+      navigate("notfound");
+    }
+  }, [id, navigate]);
 
   if (!data) return <p>Loading...</p>;
   return (

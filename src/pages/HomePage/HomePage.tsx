@@ -1,11 +1,11 @@
-import HomeHeader from "../HomeHeader/HomeHeader";
+import HomeHeader from "../../components/HomeHeader/HomeHeader";
 import { Content, HomeContainer } from "./styles";
-import BenefitsCarousel from "../BenefitsCarousel/BenefitsCarousel";
-import AnimalFilterCarousel from "../AnimalFilterCarousel/AnimalFilterCarousel";
-import ProductCarousel from "../ProductCarousel/ProductCarousel";
+import BenefitsCarousel from "../../components/BenefitsCarousel/BenefitsCarousel";
+import AnimalFilterCarousel from "../../components/AnimalFilterCarousel/AnimalFilterCarousel";
+import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
 import { forYou, products } from "../../response";
-import Menu from "../Menu/Menu";
-import SideMenu from "../SideMenu/SideMenu";
+import Menu from "../../components/Menu/Menu";
+import SideMenu from "../../components/SideMenu/SideMenu";
 import React from "react";
 
 const HomePage = () => {
